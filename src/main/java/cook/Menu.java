@@ -24,9 +24,9 @@ import org.springframework.stereotype.Component;
 @Component
 public class Menu {
 
-	private final String feed;
+	private final String ocho;
 
-	private final String prime;
+	private final String world;
 
 	private final String name;
 
@@ -39,15 +39,15 @@ public class Menu {
 	private final String rabbitmq; 
 
 	public Menu(
-			@Value("${feed:none}") String feed,
-			@Value("${prime:none}") String prime,
+			@Value("${ocho:none}") String ocho,
+			@Value("${world:none}") String world,
 			@Value("${name:none}") String name,
 			@Value("${azure:none}") String azure,
 			@Value("${logging:none}") String logging,
 			@Value("${monitoring:none}") String monitoring,
 			@Value("${rabbitmq:none}") String rabbitmq) {
-		this.feed = feed;
-		this.prime = prime;
+		this.ocho = ocho;
+		this.world = world;
 		this.name = name;
 		this.azure = azure;
 		this.logging = logging;
@@ -55,12 +55,12 @@ public class Menu {
 		this.rabbitmq = rabbitmq;
 	}
 
-	public String getFeed() {
-		return feed;
+	public String getOcho() {
+		return ocho;
 	}
 
-	public String getPrime() {
-		return prime;
+	public String getWorld() {
+		return world;
 	}
 
 	public String getName() {
@@ -84,7 +84,7 @@ public class Menu {
 	}
 
 	public String writeOutput(){
-		String output = "<b>Feed: </b>" + getFeed() + "<br>" + "<b>Prime: </b>" + getPrime() + "<br>" + "<b>Name: </b>" + getName() + "<br>" + "<b>Azure: </b>" + getAzure() + "<br>" + "<b>Logging:</b>" + getLogging() + "<br>" + "<b>Monitoring:</b> " + getMonitoring() + "<br>" + "<b>Rabbit: </b> " + getRabbitMQ();
+		String output = "<b>Ocho: </b>" + getOcho() + "<br>" + "<b>Save The World: </b>" + getWorld() + "<br>" + "<b>Name: </b>" + getName() + "<br>" + "<b>Azure: </b>" + getAzure() + "<br>" + "<b>Logging:</b>" + getLogging() + "<br>" + "<b>Monitoring:</b> " + getMonitoring() + "<br>" + "<b>Rabbit: </b> " + getRabbitMQ();
 		return output; 
 	}		
 }

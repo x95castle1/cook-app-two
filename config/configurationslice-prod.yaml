@@ -5,6 +5,12 @@ metadata:
   namespace: jeremy
 spec:
   interval: 30s
-  configurationSource: cook-config-source
+  configurationSource: cook-app-two-config-source
   content:
-  - cook
+    - application/ocho
+    - application/save-the-world
+    - application
+    - application/azure
+    - application/logging
+    - application/monitoring
+    - application/rabbit-mq
