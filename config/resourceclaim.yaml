@@ -7,5 +7,5 @@ spec:
   ref:
     apiVersion: config.apps.tanzu.vmware.com/v1alpha4
     kind: ConfigurationSlice
-    name: cook-app-two-config-stg
+    name: cook-app-two-config
     namespace: jeremy
